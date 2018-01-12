@@ -6,6 +6,8 @@ $(document).ready(function() {
     var div5 = "";
     var div6 = "";
     var contador = 0;
+    var imgBien = '<img src="img/bien.jpg" alt="bien, ok" width="2%">';
+    var imgMal = '<img src="img/mal.jpg" alt="mal" width="2%">';
     artyom.fatality(); // Detener cualquier instancia previa
 
     setTimeout(function(){// Esperar 250ms para inicializar
@@ -153,6 +155,8 @@ $(document).ready(function() {
                         if (i == 0) {
                             artyom.say("PREGUNTAS DE APTITUD lógica");
                             artyom.say("Para responder la pregunta debe decir la respuesta ejemplo, cinco horas");
+                            artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
+                            artyom.say("Ejemplo: repetir 7 ");
                             artyom.say("Pregunta 3 ");
                             artyom.say("Dos pantalones se secan en dos horas, ¿en qué tiempo se secan 3 pantalones?");
                             artyom.say("a. Una hora");
@@ -214,8 +218,6 @@ $(document).ready(function() {
                     action: function(i){
                         if (i == 0) {
                             artyom.say("Para responder la pregunta debe decir la respuesta ejemplo, noveno");
-                            artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
-                            artyom.say("Ejemplo: repetir 7 ");
                             artyom.say("Pregunta 4");
                             artyom.say("En una carrera de 5 competidores adelantas al que va segundo, ¿en qué puesto quedas?");
                             artyom.say("a. primero");
@@ -345,8 +347,6 @@ $(document).ready(function() {
                     action: function(i){
                         if (i == 0) {
                             artyom.say("Para responder la pregunta debe decir la letra de la respuesta");
-                            artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
-                            artyom.say("Ejemplo: repetir 7 ");
                             artyom.say("Pregunta 6");
                             artyom.say("La Universidad es una institución educativa de nivel superior que se responsabiliza de formar \n\
                                         Íntegramente a los educandos, principalmente. Dicha integridad compete abordar varios aspectos \n\
@@ -415,29 +415,44 @@ $(document).ready(function() {
                             if((document.getElementById("res").value = document.getElementById("res").innerHTML == "Recreación") ){
                                 contador = contador +1;
                                 $("#respuesta").text(contador);
-
+                                $("#imgs").append(imgBien);
                             }else{
-                                $("#imgs").append(imgs);
+                                $("#imgs").append(imgMal);
                             }
                             if((document.getElementById("res2").value = document.getElementById("res2").innerHTML == "Cuando más creces tus ideales son menores")){
                                 contador = contador +1;
                                 $("#respuesta").append(contador);
+                                $("#imgs").append(imgBien);
+                            }else{
+                                $("#imgs").append(imgMal);
                             }
                             if((document.getElementById("res3").value = document.getElementById("res3").innerHTML == "tres horas")){
                                 contador = contador +1;
                                 $("#respuesta").text(contador);
+                                $("#imgs").append(imgBien);
+                            }else{
+                                $("#imgs").append(imgMal);
                             }
                             if((document.getElementById("res4").value = document.getElementById("res4").innerHTML == "2°")){
                                 contador = contador +1;
                                 $("#respuesta").text(contador);
+                                $("#imgs").append(imgBien);
+                            }else{
+                                $("#imgs").append(imgMal);
                             }
                             if((document.getElementById("res5").value = document.getElementById("res5").innerHTML == "El trabajo en equipo")){
                                 contador = contador +1;
                                 $("#respuesta").text(contador);
+                                $("#imgs").append(imgBien);
+                            }else{
+                                $("#imgs").append(imgMal);
                             }
                             if(((document.getElementById("res6").value = document.getElementById("res6").innerHTML) == "item b")){
                                 contador = contador +1;
                                 $("#respuesta").text(contador);
+                                $("#imgs").append(imgBien);
+                            }else{
+                                $("#imgs").append(imgMal);
                             }
                             $("#respuesta").append(contador);
                             artyom.say("examen terminado");
