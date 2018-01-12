@@ -5,12 +5,6 @@ $(document).ready(function() {
     var div4 = "";
     var div5 = "";
     var div6 = "";
-    /*var res = $(document.getElementById("res"));
-    var res2 = $(document.getElementById("res2"));
-    var res3 = $(document.getElementById("res3"));
-    var res4 = $(document.getElementById("res4"));
-    var res5 = $(document.getElementById("res5"));
-    var res6 = $(document.getElementById("res6"));_*/
     var contador = 0;
     artyom.fatality(); // Detener cualquier instancia previa
 
@@ -32,7 +26,7 @@ $(document).ready(function() {
         indexes:["Comenzar", "Comensar"],
         action: function(i){
             if (i == 0) {
-                artyom.say("Tener en cuenta lo siguientes puntos antes de comenxar el examen");
+                artyom.say("Tener en cuenta lo siguientes puntos antes de empezar el examen");
                 artyom.say("En cada pregunta se le dirá como debe responder a la pregunta");
                 artyom.say("O Si Desea repetir la pregunta, solo dice repetir con el número de la pregunta");
                 artyom.say("Ejemplo: repetir 7 ");
@@ -46,7 +40,7 @@ $(document).ready(function() {
                 artyom.say("b. Descanso");
                 artyom.say("c. Sueño");
                 artyom.say("d. Detención");
-                div += '<div style="border: 4px solid black;" class="pregunta1">';
+                div += '<div style="border: 4px solid black;padding:1em;width: 62%;" class="pregunta1">';
                 div += 'PREGUNTAS DE APTITUD VERBAL<br>';
                 div += '<strong>Pregunta 1</strong><br>';
                 div += 'Elija la palabra que complete el campo semántico siguiente: juego, diversión, entretenimiento, <br>';
@@ -451,7 +445,7 @@ $(document).ready(function() {
                                 artyom.say("Su resultado final es de "+contador+" sobre 6");
                                 artyom.say("En Buena hora, usted aprobado el examen");
                             }
-                            
+
                         };
                     }
                 }]);
