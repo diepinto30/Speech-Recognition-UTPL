@@ -4,10 +4,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Reconocimiento de Voz UTPL</title>
+	<link rel="shortcut icon" href="img/UTPLsmall.ico" type="image/vnd.microsoft.icon">
 	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/Preguntas.js"></script>
 	<script src="js/artyom.min.js"></script>
 	<script src="js/artyomCommands.js"></script>
-	<script src="js/Preguntas.js"></script>
+	<link rel="stylesheet" href="css/estilos.css">
+
 	<script>
 miFecha = new Date()
 document.write(miFecha.getHours() + ":" + miFecha.getMinutes() + ":" + miFecha.getSeconds())
@@ -16,9 +19,24 @@ document.write(miFecha.getHours() + ":" + miFecha.getMinutes() + ":" + miFecha.g
 	</style>
 </head>
 <body>
-	
+	<header>
+        <div class="header1">
+  <!--		    <img class="logo" src="img/utplA.png" alt="logo UTPL">-->
+        	<img class="logo" src="img/UTPL1B.png" alt="logo UTPL">
+            <div class="textlogo">
+                <p>Universidad Técnica Particular de loja</p>
+                <p>Sistema de admisión de la UTPL </p>
+            </div>
 
+        </div>
 
+  </header>
+	<div id="preguntas" class="preguntas">
+	</div>
+	<div id="preguntas2" class="preguntas">
+	</div>
 
+	<div id="div1" class="preguntas">
+	</div>
 </body>
 </html>
