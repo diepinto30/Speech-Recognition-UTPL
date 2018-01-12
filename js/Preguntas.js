@@ -109,7 +109,7 @@ $(document).ready(function() {
                             div2 += '<strong>b.</strong> Cuando más creces tus ideales son menores <br>';
                             div2 += '<strong>c.</strong> La luz de sus ojos alumbran mi camino <br>';
                             div2 += '<strong>d.</strong> Los ojos de mi madre son la ventana de mi alma<br>';
-                            div2 += 'Su respuesta escogida: <strong><p id="res2"></p></strong><div id="imgs"></div>';
+                            div2 += 'Su respuesta escogida: <strong><p id="res2"></p></strong><div id="imgs2"></div>';
                             div2 += '</div>';
                             $("#preguntas2").append(div2);
                         };
@@ -172,7 +172,7 @@ $(document).ready(function() {
                             div3 += '<strong>b.</strong> dos horas <br>';
                             div3 += '<strong>c.</strong> tres horas <br>';
                             div3 += '<strong>d.</strong> cuarto horas<br>';
-                            div3 += 'Su respuesta escogida: <strong><p id="res3"></p></strong><div id="imgs"></div>';
+                            div3 += 'Su respuesta escogida: <strong><p id="res3"></p></strong><div id="imgs3"></div>';
                             div3 += '</div>';
                             $("#preguntas3").append(div3);
                         };
@@ -233,7 +233,7 @@ $(document).ready(function() {
                             div4 += '<strong>b.</strong> 2° <br>';
                             div4 += '<strong>c.</strong> 3° <br>';
                             div4 += '<strong>d.</strong> 4° <br>';
-                            div4 += 'Su respuesta escogida: <strong><p id="res4"></p></strong><div id="imgs"></div>';
+                            div4 += 'Su respuesta escogida: <strong><p id="res4"></p></strong><div id="imgs4"></div>';
                             div4 += '</div>';
                             $("#preguntas4").append(div4);
                         };
@@ -301,7 +301,7 @@ $(document).ready(function() {
                             div5 += '<strong>b.</strong> Indicadores de eficiencia <br>';
                             div5 += '<strong>c.</strong> Criterios de calidad <br>';
                             div5 += '<strong>d.</strong> El trabajo en equipo <br>';
-                            div5 += 'Su respuesta escogida: <strong><p id="res5"></p></strong> <div id="imgs"></div>';
+                            div5 += 'Su respuesta escogida: <strong><p id="res5"></p></strong> <div id="imgs5"></div>';
                             div5 += '</div>';
                             $("#preguntas5").append(div5);
                         };
@@ -366,7 +366,7 @@ $(document).ready(function() {
                             div6 += '<strong>b.</strong> La formación del sentido Ético y social <br>';
                             div6 += '<strong>c.</strong> La comprensión del sentido de empresa <br>';
                             div6 += '<strong>d.</strong> La búsqueda incansable del Éxito <br>';
-                            div6 += 'Su respuesta escogida: <strong><p id="res6"></p></strong><div id="imgs"></div>';
+                            div6 += 'Su respuesta escogida: <strong><p id="res6"></p></strong><div id="imgs6"></div>';
                             div6 += '</div>';
                             $("#preguntas6").append(div6);
                         };
@@ -422,37 +422,37 @@ $(document).ready(function() {
                             if((document.getElementById("res2").value = document.getElementById("res2").innerHTML == "Cuando más creces tus ideales son menores")){
                                 contador = contador +1;
                                 $("#respuesta").append(contador);
-                                $("#imgs").append(imgBien);
+                                $("#imgs2").append(imgBien);
                             }else{
-                                $("#imgs").append(imgMal);
+                                $("#imgs2").append(imgMal);
                             }
                             if((document.getElementById("res3").value = document.getElementById("res3").innerHTML == "tres horas")){
                                 contador = contador +1;
                                 $("#respuesta").text(contador);
-                                $("#imgs").append(imgBien);
+                                $("#imgs3").append(imgBien);
                             }else{
-                                $("#imgs").append(imgMal);
+                                $("#imgs3").append(imgMal);
                             }
                             if((document.getElementById("res4").value = document.getElementById("res4").innerHTML == "2°")){
                                 contador = contador +1;
                                 $("#respuesta").text(contador);
-                                $("#imgs").append(imgBien);
+                                $("#imgs4").append(imgBien);
                             }else{
-                                $("#imgs").append(imgMal);
+                                $("#imgs4").append(imgMal);
                             }
                             if((document.getElementById("res5").value = document.getElementById("res5").innerHTML == "El trabajo en equipo")){
                                 contador = contador +1;
                                 $("#respuesta").text(contador);
-                                $("#imgs").append(imgBien);
+                                $("#imgs5").append(imgBien);
                             }else{
-                                $("#imgs").append(imgMal);
+                                $("#imgs5").append(imgMal);
                             }
                             if(((document.getElementById("res6").value = document.getElementById("res6").innerHTML) == "item b")){
                                 contador = contador +1;
                                 $("#respuesta").text(contador);
-                                $("#imgs").append(imgBien);
+                                $("#imgs6").append(imgBien);
                             }else{
-                                $("#imgs").append(imgMal);
+                                $("#imgs6").append(imgMal);
                             }
                             $("#respuesta").append(contador);
                             artyom.say("examen terminado");
