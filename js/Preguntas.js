@@ -40,7 +40,7 @@ $(document).ready(function() {
                 artyom.say("b. Descanso");
                 artyom.say("c. Sueño");
                 artyom.say("d. Detención");
-                div += '<div style="border: 4px solid black;padding:1em;width: 62%;" class="pregunta1">';
+                div += '<div style="border: 4px solid black;padding:1.5em;width: 91.2%;margin-left: 2em;" class="pregunta1">';
                 div += 'PREGUNTAS DE APTITUD VERBAL<br>';
                 div += '<strong>Pregunta 1</strong><br>';
                 div += 'Elija la palabra que complete el campo semántico siguiente: juego, diversión, entretenimiento, <br>';
@@ -48,7 +48,7 @@ $(document).ready(function() {
                 div += '<strong>b.</strong> Descanso <br>';
                 div += '<strong>c.</strong> Sueño <br>';
                 div += '<strong>d.</strong> Detención<br>';
-                div += 'Su respuesta escogida: <strong><p id="res"></p></strong>';
+                div += 'Su respuesta escogida: <strong><p id="res"></p></strong><div id="imgs"></div>';
                 div += '</div>';
                 $("#preguntas").append(div);
                 artyom.say("Su respuesta es:");
@@ -99,7 +99,7 @@ $(document).ready(function() {
                             artyom.say("c. La luz de sus ojos alumbran mi camino.");
                             artyom.say("d. Los ojos de mi madre son la ventana de mi alma.");
                             artyom.say("Su respuesta es:");
-                            div2 += '<div style="border: 4px solid black;" class="pregunta1">';
+                            div2 += '<div style="border: 4px solid black;padding:1.5em;width: 91.2%;margin-left: 2em;" class="pregunta1">';
                             div2 += 'PREGUNTAS DE APTITUD VERBAL<br>';
                             div2 += '<strong>Pregunta 2</strong><br>';
                             div2 += 'Escuche las siguientes frases e identifique la que contiene palabras antónimas.<br>';
@@ -107,7 +107,7 @@ $(document).ready(function() {
                             div2 += '<strong>b.</strong> Cuando más creces tus ideales son menores <br>';
                             div2 += '<strong>c.</strong> La luz de sus ojos alumbran mi camino <br>';
                             div2 += '<strong>d.</strong> Los ojos de mi madre son la ventana de mi alma<br>';
-                            div2 += 'Su respuesta escogida: <strong><div id="res2"></div></strong>';
+                            div2 += 'Su respuesta escogida: <strong><p id="res2"></p></strong><div id="imgs"></div>';
                             div2 += '</div>';
                             $("#preguntas2").append(div2);
                         };
@@ -160,7 +160,7 @@ $(document).ready(function() {
                             artyom.say("c. tres horas");
                             artyom.say("d. cuatro horas");
                             artyom.say("Su respuesta es:");
-                            div3 += '<div style="border: 4px solid black;" class="pregunta1">';
+                            div3 += '<div style="border: 4px solid black;padding:1.5em;width: 91.2%;margin-left: 2em;" class="pregunta1">';
                             div3 += 'PREGUNTAS DE APTITUD LOGICA<br>';
                             div3 += '<strong>Pregunta 3</strong><br>';
                             div3 += 'Dos pantalones se secan en dos horas, ¿en qué tiempo se secan 3 pantalones?<br>';
@@ -168,7 +168,7 @@ $(document).ready(function() {
                             div3 += '<strong>b.</strong> dos horas <br>';
                             div3 += '<strong>c.</strong> tres horas <br>';
                             div3 += '<strong>d.</strong> cuarto horas<br>';
-                            div3 += 'Su respuesta escogida: <strong><div id="res3"></div></strong>';
+                            div3 += 'Su respuesta escogida: <strong><p id="res3"></p></strong><div id="imgs"></div>';
                             div3 += '</div>';
                             $("#preguntas3").append(div3);
                         };
@@ -223,7 +223,7 @@ $(document).ready(function() {
                             artyom.say("c. tercero");
                             artyom.say("d. cuarto");
                             artyom.say("Su respuesta es:");
-                            div4 += '<div style="border: 4px solid black;" class="pregunta1">';
+                            div4 += '<div style="border: 4px solid black;padding:1.5em;width: 91.2%;margin-left: 2em;" class="pregunta1">';
                             div4 += 'PREGUNTAS DE APTITUD LOGICA<br>';
                             div4 += '<strong>Pregunta 4</strong><br>';
                             div4 += 'En una carrera de 5 competidores adelantas al que va segundo, ¿en qué puesto quedas?.<br>';
@@ -231,7 +231,7 @@ $(document).ready(function() {
                             div4 += '<strong>b.</strong> 2° <br>';
                             div4 += '<strong>c.</strong> 3° <br>';
                             div4 += '<strong>d.</strong> 4° <br>';
-                            div4 += 'Su respuesta escogida: <strong><div id="res4"></div></strong>';
+                            div4 += 'Su respuesta escogida: <strong><p id="res4"></p></strong><div id="imgs"></div>';
                             div4 += '</div>';
                             $("#preguntas4").append(div4);
                         };
@@ -290,7 +290,7 @@ $(document).ready(function() {
                             artyom.say("c. Criterios de calidad");
                             artyom.say("d. El trabajo en equipo");
                             artyom.say("Su respuesta es:");
-                            div5 += '<div style="border: 4px solid black;" class="pregunta1">';
+                            div5 += '<div style="border: 4px solid black;padding:1.5em;width: 91.2%;margin-left: 2em;" class="pregunta1">';
                             div5 += 'COMPETENCIAS ESPÍRITU DE LA UNIVERSIDAD<br>';
                             div5 += '<strong>Pregunta 5</strong><br>';
                             div5 += 'La visión de la UTPL es el Humanismo de Cristo con lo cual se propugna una Universidad \n\
@@ -299,7 +299,7 @@ $(document).ready(function() {
                             div5 += '<strong>b.</strong> Indicadores de eficiencia <br>';
                             div5 += '<strong>c.</strong> Criterios de calidad <br>';
                             div5 += '<strong>d.</strong> El trabajo en equipo <br>';
-                            div5 += 'Su respuesta escogida: <strong><div id="res5"></div></strong>';
+                            div5 += 'Su respuesta escogida: <strong><p id="res5"></p></strong> <div id="imgs"></div>';
                             div5 += '</div>';
                             $("#preguntas5").append(div5);
                         };
@@ -356,7 +356,7 @@ $(document).ready(function() {
                             artyom.say("c. La comprensión del sentido de empresa");
                             artyom.say("d. La búsqueda incansable del Éxito");
                             artyom.say("Su respuesta es:");
-                            div6 += '<div style="border: 4px solid black;" class="pregunta1">';
+                            div6 += '<div style="border: 4px solid black;padding:1.5em;width: 91.2%;margin-left: 2em;" class="pregunta1">';
                             div6 += 'COMPETENCIAS ESPÍRITU DE LA UNIVERSIDAD<br>';
                             div6 += '<strong>Pregunta 6</strong><br>';
                             div6 += 'La Universidad es una institución educativa de nivel superior que se responsabiliza de formar \n\
@@ -366,7 +366,7 @@ $(document).ready(function() {
                             div6 += '<strong>b.</strong> La formación del sentido Ético y social <br>';
                             div6 += '<strong>c.</strong> La comprensión del sentido de empresa <br>';
                             div6 += '<strong>d.</strong> La búsqueda incansable del Éxito <br>';
-                            div6 += 'Su respuesta escogida: <strong><div id="res6"></div></strong>';
+                            div6 += 'Su respuesta escogida: <strong><p id="res6"></p></strong><div id="imgs"></div>';
                             div6 += '</div>';
                             $("#preguntas6").append(div6);
                         };
@@ -415,6 +415,9 @@ $(document).ready(function() {
                             if((document.getElementById("res").value = document.getElementById("res").innerHTML == "Recreación") ){
                                 contador = contador +1;
                                 $("#respuesta").text(contador);
+
+                            }else{
+                                $("#imgs").append(imgs);
                             }
                             if((document.getElementById("res2").value = document.getElementById("res2").innerHTML == "Cuando más creces tus ideales son menores")){
                                 contador = contador +1;
