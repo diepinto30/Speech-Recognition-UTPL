@@ -5,12 +5,12 @@ $(document).ready(function() {
     var div4 = "";
     var div5 = "";
     var div6 = "";
-    var res = document.getElementById("res");
-    var res2 = document.getElementById("res2");
-    var res3 = document.getElementById("res3");
-    var res4 = document.getElementById("res4");
-    var res5 = document.getElementById("res5");
-    var res6 = document.getElementById("res6");
+    /*var res = $(document.getElementById("res"));
+    var res2 = $(document.getElementById("res2"));
+    var res3 = $(document.getElementById("res3"));
+    var res4 = $(document.getElementById("res4"));
+    var res5 = $(document.getElementById("res5"));
+    var res6 = $(document.getElementById("res6"));_*/
     var contador = 0;
     artyom.fatality(); // Detener cualquier instancia previa
 
@@ -32,10 +32,13 @@ $(document).ready(function() {
         indexes:["Comenzar", "Comensar"],
         action: function(i){
             if (i == 0) {
-                artyom.say("PREGUNTAS DE APTITUD VERBAL");
-                artyom.say("Para responder la pregunta debe decir  la palabra respuesta más el literal");
-                artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
+                artyom.say("Tener en cuenta lo siguientes puntos antes de comenxar el examen");
+                artyom.say("En cada pregunta se le dirá como debe responder a la pregunta");
+                artyom.say("O Si Desea repetir la pregunta, solo dice repetir con el número de la pregunta");
                 artyom.say("Ejemplo: repetir 7 ");
+                artyom.say("Empezamos ahora");
+                artyom.say("PREGUNTAS DE APTITUD VERBAL");
+                artyom.say("Para responder la pregunta debe decir la palabra respuesta seguido del literal");
                 artyom.say("Pregunta uno");
                 artyom.say("Elija la palabra que conplete el campo semántico siguiente:");
                 artyom.say("juego, diversión, entretenimiento, ");
@@ -51,7 +54,7 @@ $(document).ready(function() {
                 div += '<strong>b.</strong> Descanso <br>';
                 div += '<strong>c.</strong> Sueño <br>';
                 div += '<strong>d.</strong> Detención<br>';
-                div += 'Su respuesta escogida: <strong><div id="res"></div></strong>';
+                div += 'Su respuesta escogida: <strong><p id="res"></p></strong>';
                 div += '</div>';
                 $("#preguntas").append(div);
                 artyom.say("Su respuesta es:");
@@ -94,9 +97,7 @@ $(document).ready(function() {
                     indexes:["Segunda Pregunta", "s"],
                     action: function(i){
                         if (i == 0) {
-                            artyom.say("Para responder la pregunta debe decir la palabra literal mas el literal");
-                            artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
-                            artyom.say("Ejemplo: repetir 7 ");
+                            artyom.say("Para responder la pregunta debe decir la palabra literal, seguido del literal");
                             artyom.say("Pregunta Dos");
                             artyom.say("Escuche las siguientes frases e identifique la que contiene palabras antónimas.");
                             artyom.say("a. La obscuridad de la noche da tristeza.");
@@ -157,11 +158,9 @@ $(document).ready(function() {
                     action: function(i){
                         if (i == 0) {
                             artyom.say("PREGUNTAS DE APTITUD lógica");
-                            artyom.say("Para responder la pregunta debe decir la respuesta");
-                            artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
-                            artyom.say("Ejemplo: repetir 7 ");
+                            artyom.say("Para responder la pregunta debe decir la respuesta ejemplo, cinco horas");
                             artyom.say("Pregunta 3 ");
-                            artyom.say("Dos pantalones se secan en dos horas ¿en qué tiempo se secan 3 pantalones?");
+                            artyom.say("Dos pantalones se secan en dos horas, ¿en qué tiempo se secan 3 pantalones?");
                             artyom.say("a. Una hora");
                             artyom.say("b. dos horas");
                             artyom.say("c. tres horas");
@@ -170,7 +169,7 @@ $(document).ready(function() {
                             div3 += '<div style="border: 4px solid black;" class="pregunta1">';
                             div3 += 'PREGUNTAS DE APTITUD LOGICA<br>';
                             div3 += '<strong>Pregunta 3</strong><br>';
-                            div3 += 'Dos pantalones se secan en dos horas ¿en qué tiempo se secan 3 pantalones?<br>';
+                            div3 += 'Dos pantalones se secan en dos horas, ¿en qué tiempo se secan 3 pantalones?<br>';
                             div3 += '<strong>a.</strong> Una hora <br>';
                             div3 += '<strong>b.</strong> dos horas <br>';
                             div3 += '<strong>c.</strong> tres horas <br>';
@@ -205,7 +204,7 @@ $(document).ready(function() {
                                     $(".pregunta3").fadeIn("slow");
                                 }else if (i == 4) {
                                     artyom.say("Pregunta 3 ");
-                                    artyom.say("Dos pantalones se secan en dos horas ¿en qué tiempo se secan 3 pantalones?");
+                                    artyom.say("Dos pantalones se secan en dos horas, ¿en qué tiempo se secan 3 pantalones?");
                                     artyom.say("a. Una hora");
                                     artyom.say("b. dos horas");
                                     artyom.say("c. tres horas");
@@ -220,7 +219,7 @@ $(document).ready(function() {
                     indexes:["cuarta Pregunta", "s"],
                     action: function(i){
                         if (i == 0) {
-                            artyom.say("Para responder la pregunta debe decir la respuesta");
+                            artyom.say("Para responder la pregunta debe decir la respuesta ejemplo, noveno");
                             artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
                             artyom.say("Ejemplo: repetir 7 ");
                             artyom.say("Pregunta 4");
@@ -285,7 +284,7 @@ $(document).ready(function() {
                     indexes:["quinta Pregunta", "s"],
                     action: function(i){
                         if (i == 0) {
-                            artyom.say("COMPETENCIAS ESPÍRITU DE LA UNIVERSIDAD");
+                            artyom.say("COMPETENCIA ESPÍRITUAL DE LA UNIVERSIDAD");
                             artyom.say("Para responder la pregunta debe decir la respuesta");
                             artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
                             artyom.say("Ejemplo: repetir 7 ");
@@ -311,7 +310,7 @@ $(document).ready(function() {
                             $("#preguntas5").append(div5);
                         };
                         artyom.addCommands([{
-                            indexes:["La dignidad humana", "Indicadores de eficiencia", "Criterios de calidad", "El trabajo en equipo", "Repetir 5"],
+                            indexes:["La dignidad humana", "Indicadores de eficiencia", "criterios de calidad", "el trabajo en equipo", "Repetir 5"],
                             action: function(i){
                                 if (i == 0) {
                                     var gAux = "La dignidad humana";
@@ -351,7 +350,7 @@ $(document).ready(function() {
                     indexes:["sexta Pregunta", "s"],
                     action: function(i){
                         if (i == 0) {
-                            artyom.say("Para responder la pregunta debe decir letra de la respuesta");
+                            artyom.say("Para responder la pregunta debe decir la letra de la respuesta");
                             artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
                             artyom.say("Ejemplo: repetir 7 ");
                             artyom.say("Pregunta 6");
@@ -378,7 +377,7 @@ $(document).ready(function() {
                             $("#preguntas6").append(div6);
                         };
                         artyom.addCommands([{
-                            indexes:[" ítem a ", " ítem b", "ítem c", "ítem d", "Repetir 6"],
+                            indexes:[" a ", " b", "c", "d", "Repetir 6"],
                             action: function(i){
                                 if (i == 0) {
                                     var gAux = "item a";
@@ -419,23 +418,40 @@ $(document).ready(function() {
                     indexes:["terminar", "t"],
                     action: function(i){
                         if (i == 0) {
-                            if((res == "Recreación") ){
+                            if((document.getElementById("res").value = document.getElementById("res").innerHTML == "Recreación") ){
                                 contador = contador +1;
-                            }else if((res2 == "Cuando más creces tus ideales son menores")){
-                                contador = contador +1;
-                            }else if((res3 == "tres horas")){
-                                contador = contador +1;
-                            }else if((res4 == "2°")){
-                                contador = contador +1;
-                            }else if((res5 == "El trabajo en equipo")){
-                                contador = contador +1;
-                            }else if((res6 == "item b")){
-                                contador = contador +1;
+                                $("#respuesta").text(contador);
                             }
-                            artyam.say("Su nota es de: "+contador+"sobre 6");
-                             $("#respuesta").append(contador);
-                            console.log(contador);
-                            alert(contador);
+                            if((document.getElementById("res2").value = document.getElementById("res2").innerHTML == "Cuando más creces tus ideales son menores")){
+                                contador = contador +1;
+                                $("#respuesta").append(contador);
+                            }
+                            if((document.getElementById("res3").value = document.getElementById("res3").innerHTML == "tres horas")){
+                                contador = contador +1;
+                                $("#respuesta").text(contador);
+                            }
+                            if((document.getElementById("res4").value = document.getElementById("res4").innerHTML == "2°")){
+                                contador = contador +1;
+                                $("#respuesta").text(contador);
+                            }
+                            if((document.getElementById("res5").value = document.getElementById("res5").innerHTML == "El trabajo en equipo")){
+                                contador = contador +1;
+                                $("#respuesta").text(contador);
+                            }
+                            if(((document.getElementById("res6").value = document.getElementById("res6").innerHTML) == "item b")){
+                                contador = contador +1;
+                                $("#respuesta").text(contador);
+                            }
+                            $("#respuesta").append(contador);
+                            artyom.say("examen terminado");
+                            if(contador <= 4 ){
+                                artyom.say("Su resultado final es de "+contador+" sobre 6");
+                                artyom.say("Lo sentimos, usted no aprobado el examen");
+                            }else if(contador >= 5){
+                                artyom.say("Su resultado final es de "+contador+" sobre 6");
+                                artyom.say("En Buena hora, usted aprobado el examen");
+                            }
+                            
                         };
                     }
                 }]);
