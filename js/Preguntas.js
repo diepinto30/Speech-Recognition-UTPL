@@ -5,6 +5,13 @@ $(document).ready(function() {
     var div4 = "";
     var div5 = "";
     var div6 = "";
+    var res = document.getElementById("res");
+    var res2 = document.getElementById("res2");
+    var res3 = document.getElementById("res3");
+    var res4 = document.getElementById("res4");
+    var res5 = document.getElementById("res5");
+    var res6 = document.getElementById("res6");
+    var contador = 0;
     artyom.fatality(); // Detener cualquier instancia previa
 
     setTimeout(function(){// Esperar 250ms para inicializar
@@ -17,7 +24,7 @@ $(document).ready(function() {
         }).then(function(){
             console.log("Ready to work !");
             artyom.say("Bienvenido al sistema de admisión de la UTPL ");
-            artyom.say("Para emprezar la prueba diga Comezar");
+            artyom.say("Para emprezar la prueba diga Comenzar");
         });
     }, 2500);
 //El sistema responde
@@ -26,7 +33,7 @@ $(document).ready(function() {
         action: function(i){
             if (i == 0) {
                 artyom.say("PREGUNTAS DE APTITUD VERBAL");
-                artyom.say("Para responder la pregunta debe decir el valor del literal");
+                artyom.say("Para responder la pregunta debe decir  la palabra respuesta más el literal");
                 artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
                 artyom.say("Ejemplo: repetir 7 ");
                 artyom.say("Pregunta uno");
@@ -54,25 +61,21 @@ $(document).ready(function() {
                         if (i == 0) {
                             var gAux = "Recreación";
                             $("#res").text(gAux);
-                            //$(".pregunta1").fadeOut();
                             artyom.say("Para activar la otra pregunta decir segunda pregunta");
                             $(".pregunta2").fadeIn("slow");
                         }else if (i == 1) {
                             var gAux = "Descanso";
                             $("#res").text(gAux);
-                            //$(".pregunta1").fadeOut();
                             artyom.say("Para activar la otra pregunta decir segunda pregunta");
                             $(".pregunta2").fadeIn("slow");
                         }else if (i == 2) {
                             var gAux = "Sueño";
                             $("#res").text(gAux);
-                            //$(".pregunta1").fadeOut();
                             artyom.say("Para activar la otra pregunta decir segunda pregunta");
                             $(".pregunta2").fadeIn("slow");
                         } else if (i == 3) {
                             var gAux = "Detención";
                             $("#res").text(gAux);
-                            //$(".pregunta1").fadeOut();
                             artyom.say("Para activar la otra pregunta decir segunda pregunta");
                             $(".pregunta2").fadeIn("slow");
                         }else if (i == 4) {
@@ -91,6 +94,9 @@ $(document).ready(function() {
                     indexes:["Segunda Pregunta", "s"],
                     action: function(i){
                         if (i == 0) {
+                            artyom.say("Para responder la pregunta debe decir la palabra literal mas el literal");
+                            artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
+                            artyom.say("Ejemplo: repetir 7 ");
                             artyom.say("Pregunta Dos");
                             artyom.say("Escuche las siguientes frases e identifique la que contiene palabras antónimas.");
                             artyom.say("a. La obscuridad de la noche da tristeza.");
@@ -111,30 +117,26 @@ $(document).ready(function() {
                             $("#preguntas2").append(div2);
                         };
                         artyom.addCommands([{
-                            indexes:["literal A", "literal B", "literal SE", "literal D", "Repetir 2"],
+                            indexes:["literal A", "literal B", "literal C", "literal D", "Repetir 2"],
                             action: function(i){
                                 if (i == 0) {
                                     var gAux = "La obscuridad de la noche da tristeza";
                                     $("#res2").text(gAux);
-                                    //$(".pregunta1").fadeOut();
                                     artyom.say("Para activar la otra pregunta decir tercera pregunta");
                                     $(".pregunta2").fadeIn("slow");
                                 }else if (i == 1) {
                                     var gAux = "Cuando más creces tus ideales son menores";
                                     $("#res2").text(gAux);
-                                    //$(".pregunta1").fadeOut();
                                     artyom.say("Para activar la otra pregunta decir tercera pregunta");
                                     $(".pregunta2").fadeIn("slow");
                                 }else if (i == 2) {
                                     var gAux = "La luz de sus ojos alumbran mi camino";
                                     $("#res2").text(gAux);
-                                    //$(".pregunta1").fadeOut();
                                     artyom.say("Para activar la otra pregunta decir tercera pregunta");
                                     $(".pregunta2").fadeIn("slow");
                                 } else if (i == 3) {
                                     var gAux = "Los ojos de mi madre son la ventana de mi alma";
                                     $("#res2").text(gAux);
-                                    //$(".pregunta1").fadeOut();
                                     artyom.say("Para activar la otra pregunta decir tercera pregunta");
                                     $(".pregunta2").fadeIn("slow");
                                 }else if (i == 4) {
@@ -154,63 +156,287 @@ $(document).ready(function() {
                     indexes:["tercera Pregunta", "s"],
                     action: function(i){
                         if (i == 0) {
-                            artyom.say("Pregunta tres");
-                            artyom.say("Escuche las siguientes frases e identifique la que contiene palabras antónimas.");
-                            artyom.say("a. La obscuridad de la noche da tristeza.");
-                            artyom.say("b. Cuando más creces tus ideales son menores.");
-                            artyom.say("c. La luz de sus ojos alumbran mi camino.");
-                            artyom.say("d. Los ojos de mi madre son la ventana de mi alma.");
+                            artyom.say("PREGUNTAS DE APTITUD lógica");
+                            artyom.say("Para responder la pregunta debe decir la respuesta");
+                            artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
+                            artyom.say("Ejemplo: repetir 7 ");
+                            artyom.say("Pregunta 3 ");
+                            artyom.say("Dos pantalones se secan en dos horas ¿en qué tiempo se secan 3 pantalones?");
+                            artyom.say("a. Una hora");
+                            artyom.say("b. dos horas");
+                            artyom.say("c. tres horas");
+                            artyom.say("d. cuatro horas");
                             artyom.say("Su respuesta es:");
-                            div2 += '<div style="border: 4px solid black;" class="pregunta1">';
-                            div2 += 'PREGUNTAS DE APTITUD VERBAL<br>';
-                            div2 += '<strong>Pregunta 2</strong><br>';
-                            div2 += 'Escuche las siguientes frases e identifique la que contiene palabras antónimas.<br>';
-                            div2 += '<strong>a.</strong> La obscuridad de la noche da tristeza <br>';
-                            div2 += '<strong>b.</strong> Cuando más creces tus ideales son menores <br>';
-                            div2 += '<strong>c.</strong> La luz de sus ojos alumbran mi camino <br>';
-                            div2 += '<strong>d.</strong> Los ojos de mi madre son la ventana de mi alma<br>';
-                            div2 += 'Su respuesta escogida: <strong><div id="res3"></div></strong>';
-                            div2 += '</div>';
-                            $("#preguntas2").append(div2);
+                            div3 += '<div style="border: 4px solid black;" class="pregunta1">';
+                            div3 += 'PREGUNTAS DE APTITUD LOGICA<br>';
+                            div3 += '<strong>Pregunta 3</strong><br>';
+                            div3 += 'Dos pantalones se secan en dos horas ¿en qué tiempo se secan 3 pantalones?<br>';
+                            div3 += '<strong>a.</strong> Una hora <br>';
+                            div3 += '<strong>b.</strong> dos horas <br>';
+                            div3 += '<strong>c.</strong> tres horas <br>';
+                            div3 += '<strong>d.</strong> cuarto horas<br>';
+                            div3 += 'Su respuesta escogida: <strong><div id="res3"></div></strong>';
+                            div3 += '</div>';
+                            $("#preguntas3").append(div3);
                         };
                         artyom.addCommands([{
-                            indexes:["literal A", "literal B", "literal SE", "literal D", "Repetir 2"],
+                            indexes:["una hora", "2 horas", "3 horas", "4 horas ", "Repetir 3"],
                             action: function(i){
                                 if (i == 0) {
-                                    var gAux = "La obscuridad de la noche da tristeza";
+                                    var gAux = "una hora";
                                     $("#res3").text(gAux);
-                                    //$(".pregunta1").fadeOut();
                                     artyom.say("Para activar la otra pregunta decir cuarta pregunta");
                                     $(".pregunta3").fadeIn("slow");
                                 }else if (i == 1) {
-                                    var gAux = "Cuando más creces tus ideales son menores";
+                                    var gAux = "dos horas";
                                     $("#res3").text(gAux);
-                                    //$(".pregunta1").fadeOut();
                                     artyom.say("Para activar la otra pregunta decir cuarta pregunta");
                                     $(".pregunta3").fadeIn("slow");
                                 }else if (i == 2) {
-                                    var gAux = "La luz de sus ojos alumbran mi camino";
+                                    var gAux = "tres horas";
                                     $("#res3").text(gAux);
-                                    //$(".pregunta1").fadeOut();
                                     artyom.say("Para activar la otra pregunta decir cuarta pregunta");
                                     $(".pregunta3").fadeIn("slow");
                                 } else if (i == 3) {
-                                    var gAux = "Los ojos de mi madre son la ventana de mi alma";
-                                    $("#res23").text(gAux);
+                                    var gAux = "cuatro horas";
+                                    $("#res3").text(gAux);
                                     //$(".pregunta1").fadeOut();
                                     artyom.say("Para activar la otra pregunta decir cuarta pregunta");
                                     $(".pregunta3").fadeIn("slow");
                                 }else if (i == 4) {
-                                     artyom.say("Pregunta Dos");
-                                    artyom.say("Escuche las siguientes frases e identifique la que contiene palabras antónimas.");
-                                    artyom.say("a. La obscuridad de la noche da tristeza.");
-                                    artyom.say("b.Cuando más creces tus ideales son menores.");
-                                    artyom.say("c. La luz de sus ojos alumbran mi camino.");
-                                    artyom.say("d. Los ojos de mi madre son la ventana de mi alma.");
+                                    artyom.say("Pregunta 3 ");
+                                    artyom.say("Dos pantalones se secan en dos horas ¿en qué tiempo se secan 3 pantalones?");
+                                    artyom.say("a. Una hora");
+                                    artyom.say("b. dos horas");
+                                    artyom.say("c. tres horas");
+                                    artyom.say("d. cuatro horas");
                                     artyom.say("Su respuesta es:");
                                 };
                             }
                         }]);
+                    }
+                },
+                {
+                    indexes:["cuarta Pregunta", "s"],
+                    action: function(i){
+                        if (i == 0) {
+                            artyom.say("Para responder la pregunta debe decir la respuesta");
+                            artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
+                            artyom.say("Ejemplo: repetir 7 ");
+                            artyom.say("Pregunta 4");
+                            artyom.say("En una carrera de 5 competidores adelantas al que va segundo, ¿en qué puesto quedas?");
+                            artyom.say("a. primero");
+                            artyom.say("b. segundo");
+                            artyom.say("c. tercero");
+                            artyom.say("d. cuarto");
+                            artyom.say("Su respuesta es:");
+                            div4 += '<div style="border: 4px solid black;" class="pregunta1">';
+                            div4 += 'PREGUNTAS DE APTITUD LOGICA<br>';
+                            div4 += '<strong>Pregunta 4</strong><br>';
+                            div4 += 'En una carrera de 5 competidores adelantas al que va segundo, ¿en qué puesto quedas?.<br>';
+                            div4 += '<strong>a.</strong> 1° <br>';
+                            div4 += '<strong>b.</strong> 2° <br>';
+                            div4 += '<strong>c.</strong> 3° <br>';
+                            div4 += '<strong>d.</strong> 4° <br>';
+                            div4 += 'Su respuesta escogida: <strong><div id="res4"></div></strong>';
+                            div4 += '</div>';
+                            $("#preguntas4").append(div4);
+                        };
+                        artyom.addCommands([{
+                            indexes:["primero", "segundo", "tercero", "cuarto", "Repetir 4"],
+                            action: function(i){
+                                if (i == 0) {
+                                    var gAux = "1°";
+                                    $("#res4").text(gAux);
+                                    //$(".pregunta1").fadeOut();
+                                    artyom.say("Para activar la otra pregunta decir quinta pregunta");
+                                    $(".pregunta4").fadeIn("slow");
+                                }else if (i == 1) {
+                                    var gAux = "2°";
+                                    $("#res4").text(gAux);
+                                    //$(".pregunta1").fadeOut();
+                                    artyom.say("Para activar la otra pregunta decir quinta pregunta");
+                                    $(".pregunta4").fadeIn("slow");
+                                }else if (i == 2) {
+                                    var gAux = "3°";
+                                    $("#res4").text(gAux);
+                                    //$(".pregunta1").fadeOut();
+                                    artyom.say("Para activar la otra pregunta decir quinta pregunta");
+                                    $(".pregunta4").fadeIn("slow");
+                                } else if (i == 3) {
+                                    var gAux = "4°";
+                                    $("#res4").text(gAux);
+                                    //$(".pregunta1").fadeOut();
+                                    artyom.say("Para activar la otra pregunta decir quinta pregunta");
+                                    $(".pregunta4").fadeIn("slow");
+                                }else if (i == 4) {
+                                    artyom.say("Pregunta 4");
+                                    artyom.say("En una carrera de 5 competidores adelantas al que va segundo, ¿en qué puesto quedas?");
+                                    artyom.say("a. primero");
+                                    artyom.say("b. segundo");
+                                    artyom.say("c. tercero");
+                                    artyom.say("d. cuarto");
+                                };
+                            }
+                        }]);
+                    }
+                },
+                {
+                    indexes:["quinta Pregunta", "s"],
+                    action: function(i){
+                        if (i == 0) {
+                            artyom.say("COMPETENCIAS ESPÍRITU DE LA UNIVERSIDAD");
+                            artyom.say("Para responder la pregunta debe decir la respuesta");
+                            artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
+                            artyom.say("Ejemplo: repetir 7 ");
+                            artyom.say("Pregunta 5");
+                            artyom.say("La visión de la UTPL es el Humanismo de Cristo con lo cual se propugna una Universidad \n\
+                                       potenciadora e integradora donde el fundamento de toda actividad académica se sustenta en:");
+                            artyom.say("a. La dignidad humana ");
+                            artyom.say("b. Indicadores de eficiencia");
+                            artyom.say("c. Criterios de calidad");
+                            artyom.say("d. El trabajo en equipo");
+                            artyom.say("Su respuesta es:");
+                            div5 += '<div style="border: 4px solid black;" class="pregunta1">';
+                            div5 += 'COMPETENCIAS ESPÍRITU DE LA UNIVERSIDAD<br>';
+                            div5 += '<strong>Pregunta 5</strong><br>';
+                            div5 += 'La visión de la UTPL es el Humanismo de Cristo con lo cual se propugna una Universidad \n\
+                                       potenciadora e integradora donde el fundamento de toda actividad académica se sustenta en:<br>';
+                            div5 += '<strong>a.</strong> La dignidad humana <br>';
+                            div5 += '<strong>b.</strong> Indicadores de eficiencia <br>';
+                            div5 += '<strong>c.</strong> Criterios de calidad <br>';
+                            div5 += '<strong>d.</strong> El trabajo en equipo <br>';
+                            div5 += 'Su respuesta escogida: <strong><div id="res5"></div></strong>';
+                            div5 += '</div>';
+                            $("#preguntas5").append(div5);
+                        };
+                        artyom.addCommands([{
+                            indexes:["La dignidad humana", "Indicadores de eficiencia", "Criterios de calidad", "El trabajo en equipo", "Repetir 5"],
+                            action: function(i){
+                                if (i == 0) {
+                                    var gAux = "La dignidad humana";
+                                    $("#res5").text(gAux);
+                                    artyom.say("Para activar la otra pregunta decir sexta pregunta");
+                                    $(".pregunta5").fadeIn("slow");
+                                }else if (i == 1) {
+                                    var gAux = "Indicadores de eficiencia";
+                                    $("#res5").text(gAux);
+                                    artyom.say("Para activar la otra pregunta decir sexta pregunta");
+                                    $(".pregunta5").fadeIn("slow");
+                                }else if (i == 2) {
+                                    var gAux = "Criterios de calidad";
+                                    $("#res5").text(gAux);
+                                    artyom.say("Para activar la otra pregunta decir sexta pregunta");
+                                    $(".pregunta5").fadeIn("slow");
+                                } else if (i == 3) {
+                                    var gAux = "El trabajo en equipo";
+                                    $("#res5").text(gAux);
+                                    artyom.say("Para activar la otra pregunta decir sexta pregunta");
+                                    $(".pregunta5").fadeIn("slow");
+                                }else if (i == 4) {
+                                    artyom.say("Pregunta 5");
+                                    artyom.say("La visión de la UTPL es el Humanismo de Cristo con lo cual se propugna una Universidad \n\
+                                               potenciadora e integradora donde el fundamento de toda actividad académica se sustenta en:");
+                                    artyom.say("a. La dignidad humana ");
+                                    artyom.say("b. Indicadores de eficiencia");
+                                    artyom.say("c. Criterios de calidad");
+                                    artyom.say("d. El trabajo en equipo");
+                                    artyom.say("Su respuesta es:");
+                                };
+                            }
+                        }]);
+                    }
+                },
+                {
+                    indexes:["sexta Pregunta", "s"],
+                    action: function(i){
+                        if (i == 0) {
+                            artyom.say("Para responder la pregunta debe decir letra de la respuesta");
+                            artyom.say("O Si Desea repetir la pregunta solo dice repetir con el número de la pregunta");
+                            artyom.say("Ejemplo: repetir 7 ");
+                            artyom.say("Pregunta 6");
+                            artyom.say("La Universidad es una institución educativa de nivel superior que se responsabiliza de formar \n\
+                                        Íntegramente a los educandos, principalmente. Dicha integridad compete abordar varios aspectos \n\
+                                        intrínsecos al ser humano, siendo relevante para el desempeño adecuado de la profesión: ");
+                            artyom.say("a. El desarrollo de las relaciones humanas ");
+                            artyom.say("b. La formación del sentido Ético y social ");
+                            artyom.say("c. La comprensión del sentido de empresa");
+                            artyom.say("d. La búsqueda incansable del Éxito");
+                            artyom.say("Su respuesta es:");
+                            div6 += '<div style="border: 4px solid black;" class="pregunta1">';
+                            div6 += 'COMPETENCIAS ESPÍRITU DE LA UNIVERSIDAD<br>';
+                            div6 += '<strong>Pregunta 6</strong><br>';
+                            div6 += 'La Universidad es una institución educativa de nivel superior que se responsabiliza de formar \n\
+                                        Íntegramente a los educandos, principalmente. Dicha integridad compete abordar varios aspectos \n\
+                                        intrínsecos al ser humano, siendo relevante para el desempeño adecuado de la profesión: <br>';
+                            div6 += '<strong>a.</strong> El desarrollo de las relaciones humanas <br>';
+                            div6 += '<strong>b.</strong> La formación del sentido Ético y social <br>';
+                            div6 += '<strong>c.</strong> La comprensión del sentido de empresa <br>';
+                            div6 += '<strong>d.</strong> La búsqueda incansable del Éxito <br>';
+                            div6 += 'Su respuesta escogida: <strong><div id="res6"></div></strong>';
+                            div6 += '</div>';
+                            $("#preguntas6").append(div6);
+                        };
+                        artyom.addCommands([{
+                            indexes:[" ítem a ", " ítem b", "ítem c", "ítem d", "Repetir 6"],
+                            action: function(i){
+                                if (i == 0) {
+                                    var gAux = "item a";
+                                    $("#res6").text(gAux);
+                                    artyom.say("Para calificar su examen diga terminar");
+                                    $(".pregunta6").fadeIn("slow");
+                                }else if (i == 1) {
+                                    var gAux = "item b";
+                                    $("#res6").text(gAux);
+                                    artyom.say("Para calificar su examen diga terminar");
+                                    $(".pregunta6").fadeIn("slow");
+                                }else if (i == 2) {
+                                    var gAux = "item c";
+                                    $("#res6").text(gAux);
+                                    artyom.say("Para calificar su examen diga terminar");
+                                    $(".pregunta6").fadeIn("slow");
+                                } else if (i == 3) {
+                                    var gAux = "item d";
+                                    $("#res6").text(gAux);
+                                    artyom.say("Para calificar su examen diga terminar");
+                                    $(".pregunta6").fadeIn("slow");
+                                }else if (i == 4) {
+                                    artyom.say("Pregunta 6");
+                                    artyom.say("La Universidad es una institución educativa de nivel superior que se responsabiliza de formar \n\
+                                                Íntegramente a los educandos, principalmente. Dicha integridad compete abordar varios aspectos \n\
+                                                intrínsecos al ser humano, siendo relevante para el desempeño adecuado de la profesión: ");
+                                    artyom.say("a. El desarrollo de las relaciones humanas ");
+                                    artyom.say("b. La formación del sentido Ético y social ");
+                                    artyom.say("c. La comprensión del sentido de empresa");
+                                    artyom.say("d. La búsqueda incansable del Éxito");
+                                    artyom.say("Su respuesta es:");
+                                };
+                            }
+                        }]);
+                    }
+                },
+                {
+                    indexes:["terminar", "t"],
+                    action: function(i){
+                        if (i == 0) {
+                            if((res == "Recreación") ){
+                                contador = contador +1;
+                            }else if((res2 == "Cuando más creces tus ideales son menores")){
+                                contador = contador +1;
+                            }else if((res3 == "tres horas")){
+                                contador = contador +1;
+                            }else if((res4 == "2°")){
+                                contador = contador +1;
+                            }else if((res5 == "El trabajo en equipo")){
+                                contador = contador +1;
+                            }else if((res6 == "item b")){
+                                contador = contador +1;
+                            }
+                            artyam.say("Su nota es de: "+contador+"sobre 6");
+                             $("#respuesta").append(contador);
+                            console.log(contador);
+                            alert(contador);
+                        };
                     }
                 }]);
             }
